@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatDate } from './helpers';
+import { formatDate } from '../helpers/formatDate';
 
 const EmailDetail = ({ email }) => {
     if (!email) return <h3 className='no-email-select'>No email selected</h3>;
