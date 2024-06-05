@@ -28,7 +28,7 @@ body {
 
 .sidebar {
     width: 300px;
-    background-color: #2c2c2e;
+    background-color: #1c1c1e;
     border-right: 1px solid #3a3a3c;
     padding: 20px;
     box-sizing: border-box;
@@ -42,7 +42,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #3a3a3c;
     margin-bottom: 30px;
 }
 
@@ -74,6 +73,10 @@ body {
     margin: 0;
 }
 
+
+
+
+
 .email-list li {
     padding: 15px;
     border-bottom: 1px solid #3a3a3c;
@@ -86,11 +89,12 @@ body {
 
 .email-list h3 {
     margin: 0 0 5px;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
 }
 
 .email-list p {
+    font-size: 12px;
     margin: 0;
     color: #a1a1a3;
     font-size: 14px;
@@ -111,9 +115,8 @@ body {
 
 .email-detail {
     padding: 20px;
-    border: 1px solid #3a3a3c;
     border-radius: 5px;
-    background-color: #2c2c2e;
+    background-color: #1c1c1e;
 }
 
 .email-detail h2 {
@@ -132,6 +135,16 @@ body {
     font-size: 16px;
     margin: 20px;
     margin-top: 50px;
+
+}
+
+.email-detail-header {
+    border-bottom: 1px solid #3a3a3c;
+}
+
+.email-detail-date {
+    font-size: 12px !important;
+    color: #99c3ff !important;
 }
 
 .compose-email {

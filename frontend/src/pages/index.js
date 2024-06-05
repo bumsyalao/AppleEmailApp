@@ -24,7 +24,7 @@ const Index = () => {
   };
 
   return (
-    <Layout onSearch={handleSearch} setEmails={setEmails} onEmailSelect={handleEmailSelect}>
+    <Layout onSearch={handleSearch} setEmails={setEmails} onEmailSelect={handleEmailSelect} emails={emails}>
       <div className="content">
         <EmailDetail email={selectedEmail} />
       </div>

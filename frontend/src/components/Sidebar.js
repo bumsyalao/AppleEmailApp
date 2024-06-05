@@ -2,21 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EmailList from './EmailList';
 
-const Sidebar = ({ onEmailSelect }) => {
-    const [emails, setEmails] = useState([]);
-
-    const fetchEmails = async () => {
-        try {
-            const response = await axios.get('/api/emails');
-            setEmails(response.data);
-        } catch (error) {
-            console.error('Failed to fetch emails:', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchEmails();
-    }, []);
+const Sidebar = ({ onEmailSelect, emails }) => {
 
     return (
         <div className="sidebar">

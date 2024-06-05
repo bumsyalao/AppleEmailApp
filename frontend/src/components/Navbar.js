@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, InputBase, Dialog } from '@mui/material';
-import MailIcon from '@mui/icons-material/Mail';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import ComposeEmail from './ComposeEmail';
 
@@ -14,11 +14,6 @@ const NavBar = ({ onSearch, setEmails, emails }) => {
         onSearch(e.target.value);
     };
 
-    // const handleSendEmail = async (newEmail) => {
-    //     setEmails((prevEmails) => [...prevEmails, newEmail]);
-    //     setIsComposing(false);
-    // };
-
     const handleSendEmail = async (newEmail) => {
         setEmails([...emails, newEmail]);
         setIsComposing(false);
@@ -27,13 +22,13 @@ const NavBar = ({ onSearch, setEmails, emails }) => {
     return (
         <AppBar position="static" style={{ backgroundColor: '#1c1c1e' }}>
             <Toolbar>
-                <div style={{ flexGrow: 1 }} />
+                <div />
                 <IconButton className='icon-button' color="inherit" onClick={() => setIsComposing(true)}>
-                    <MailIcon />
+                    <MailOutlineIcon />
                 </IconButton>
                 {searchVisible ? (
                     <div className="search-container">
-                        <SearchIcon className="search-icon" onClick={() => setSearchVisible(!searchVisible)} />
+                        <SearchIcon fontSize="small" className="search-icon" onClick={() => setSearchVisible(!searchVisible)} />
                         <InputBase
                             placeholder="Search…"
                             value={searchTerm}
